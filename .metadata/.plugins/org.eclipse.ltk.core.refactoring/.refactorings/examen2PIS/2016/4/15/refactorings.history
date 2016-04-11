@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete 2 elements from project &apos;examen2PIS&apos;&#x0A;- Original project: &apos;examen2PIS&apos;&#x0A;- Original elements:&#x0A;     examen2.InterpolacionTest.java&#x0A;     examen2.polinomioTest.java" description="Delete elements" element1="/test&lt;examen2{polinomioTest.java" element2="/test&lt;examen2{InterpolacionTest.java" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1460369257131" subPackages="false" version="1.0"/>
-</session>
