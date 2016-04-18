@@ -1,0 +1,3 @@
+C: surgam1.ddns.net 53331 surgam8291 67549989
+C: surgam2.ddns.net 53331 surgam8291 67549989
+C: surgam3.ddns.net 53331 surgam8291 67549989
