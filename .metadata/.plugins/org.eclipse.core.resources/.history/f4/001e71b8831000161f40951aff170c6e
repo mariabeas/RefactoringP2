@@ -32,8 +32,12 @@ public class App {
 				l.log(Level.INFO,"Inserte el exponente: ");
 				int exponente=Math.abs(Integer.parseInt(leer.nextLine()));
 				
-			
-				contains(poli,exponente,base);
+				if (poli.containsKey(exponente)) {
+					poli.replace(exponente, poli.get(exponente)+base);
+				} else {
+					poli.put(exponente, base);
+				}
+				
 				l.log(Level.INFO,"Su polinomio es "+clase.poliToString(poli, "x"));
 				l.log(Level.INFO,"Para volver pulse 1.\nPara seguir añadiendo valores pulse cualquier tecla.");
 				l.log(Level.INFO,"Opcion: ");
@@ -74,15 +78,6 @@ public class App {
 		} 
 		}
 	}
-	private static void contains(TreeMap<Integer, Double> poli, int exponente, double base) {
-		if (poli.containsKey(exponente)) {
-			poli.replace(exponente, poli.get(exponente)+base);
-		} else {
-			poli.put(exponente, base);
-		}
-		
-	}
-
 	private static void operaciones(Polinomio clase,int i) {
 		Logger l=Logger.getLogger("log");
 		Scanner leer=new Scanner(System.in);
