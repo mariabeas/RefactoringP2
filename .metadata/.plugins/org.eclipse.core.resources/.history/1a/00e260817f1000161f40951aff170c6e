@@ -42,7 +42,7 @@ public class App {
 				l.log(Level.INFO,"Para volver pulse 1.\nPara seguir añadiendo valores pulse cualquier tecla.");
 				l.log(Level.INFO,"Opcion: ");
 				
-				if("1".equals(leer.nextLine())){
+				if(leer.nextLine().equals("1")){
 					break;
 				}
 			}
@@ -78,6 +78,7 @@ public class App {
 		} 
 		}
 	}
+
 	private static void operaciones(polinomio clase,int i) {
 		Logger l=Logger.getLogger("log");
 		Scanner leer=new Scanner(System.in);

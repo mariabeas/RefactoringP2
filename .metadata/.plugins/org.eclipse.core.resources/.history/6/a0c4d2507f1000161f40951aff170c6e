@@ -4,7 +4,6 @@ package examen;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.TreeMap;
-import java.util.logging.Logger;
 
 import javax.xml.bind.ParseConversionEvent;
 
@@ -110,7 +109,6 @@ public class Interpolacion {
 			
 			System.out.println("El resultado del calculo de la raiz es: "+interpol(tol, a, b));
 		} catch (Exception e) {
-
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
