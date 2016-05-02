@@ -21,7 +21,9 @@ class Reina {
 	}
 
 	public boolean buscaSolucion() {
-		while (vecina != null && vecina.puedeAtacar(fila, columna))
+		//extraccion variable local ataque
+		boolean ataque=vecina.puedeAtacar(fila, columna);
+		while (vecina != null && ataque)
 			if (!avanza())
 				return false;
 		return true;
@@ -46,8 +48,7 @@ class Reina {
 
 	private boolean puedeAtacar(int testfila, int testcolumna) {
 		int columnaDiferencia = testcolumna - columna;
-		if ((fila == testfila) || (fila + columnaDiferencia == testfila)
-				|| (fila - columnaDiferencia == testfila))
+		if ((fila == testfila) || (fila + columnaDiferencia == testfila)|| (fila - columnaDiferencia == testfila))
 			return true;
 		if (vecina != null)
 			return vecina.puedeAtacar(testfila, testcolumna);
