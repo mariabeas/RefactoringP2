@@ -9,6 +9,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import examen.polinomio;
+
 public class polinomioTest {
 
 	public TreeMap<Integer, Double> tree1;
@@ -179,7 +181,7 @@ public class polinomioTest {
 		solu1 = solu1 + "S2-->" + "\t" + "4.00" + "\t" + "10.00" + "\t" + "\n";
 		solu1 = solu1 + "S1-->" + "\t" + "-1.50" + "\t" + "0.00" + "\t" + "\n";
 		solu1 = solu1 + "S0-->" + "\t" + "10.00" + "\t" + "\n";
-		solu1 = solu1 + "Sistema inestable --> dos raíces positivas (hay dos cambios de signo en primera columna)";
+		solu1 = solu1 + "Sistema inestable --> dos raï¿½ces positivas (hay dos cambios de signo en primera columna)";
 
 		assertEquals(solu1, treeResult);
 
@@ -199,9 +201,9 @@ public class polinomioTest {
 		solu3 = solu3 + "S1-->" + "\t" + "0.00" + "\t" + "\n";
 		solu3 = solu3 + "S1-->" + "\t" + "4.0" + "\n";
 		solu3 = solu3 + "S0-->" + "\t" + "18.00" + "\t" + "\n";
-		solu3 = solu3 + "Sistema críticamente estable -->" + "\n";
+		solu3 = solu3 + "Sistema crï¿½ticamente estable -->" + "\n";
 		solu3 = solu3 + "Fila cero" + "\n";
-		solu3 = solu3 + "No hay raíces positivas";
+		solu3 = solu3 + "No hay raï¿½ces positivas";
 		assertEquals(solu3, treeResult4);
 
 		// Caso 4, Sistema inestable
@@ -215,7 +217,7 @@ public class polinomioTest {
 		solu4 = solu4 + "S2-->" + "\t" + "-3.00" + "\t" + "6.00" + "\t" + "\n";
 		solu4 = solu4 + "S1-->" + "\t" + "3.00" + "\t" + "\n";
 		solu4 = solu4 + "S0-->" + "\t" + "6.00" + "\t" + "\n";
-		solu4 = solu4 + "Sistema inestable --> dos raíces positivas (hay dos cambios de signo en primera columna)";
+		solu4 = solu4 + "Sistema inestable --> dos raï¿½ces positivas (hay dos cambios de signo en primera columna)";
 
 		assertEquals(solu4, treeResult5);
 
@@ -229,11 +231,11 @@ public class polinomioTest {
 		solu5 += "S2-->" + "\t" + "30.00" + "\t" + "124.00" + "\t" + "\n";
 		solu5 += "S1-->" + "\t" + "8.67" + "\t" + "\n";
 		solu5 += "S0-->" + "\t" + "124.00" + "\t" + "\n";
-		solu5 += "Sistema estable --> no hay raíces en semiplano derecho";
+		solu5 += "Sistema estable --> no hay raï¿½ces en semiplano derecho";
 
 		assertEquals(solu5, treeResult6);
 
-		// Caso 6, Degeneración en el cálculo
+		// Caso 6, Degeneraciï¿½n en el cï¿½lculo
 		String treeResult7 = polinomio.routh(7);
 
 		String solu6 = "";
@@ -241,7 +243,7 @@ public class polinomioTest {
 		solu6 += "S5-->" + "\t" + "1.00" + "\t" + "2.00" + "\t" + "3.00" + "\t" + "\n";
 		solu6 += "S4-->" + "\t" + "3.00" + "\t" + "6.00" + "\t" + "3.00" + "\t" + "\n";
 		solu6 += "S3-->" + "\t" + "0.00" + "\t" + "2.00" + "\t" + "\n";
-		solu6 += "Degeneración en el Cálculo --> Primer elemento de fila es cero";
+		solu6 += "Degeneraciï¿½n en el Cï¿½lculo --> Primer elemento de fila es cero";
 
 		assertEquals(solu6, treeResult7);
 

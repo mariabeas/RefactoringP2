@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+servers/initialized=true
+servers/nemo/auth=false
+servers/nemo/name=nemo
+servers/nemo/url=https\://nemo.sonarqube.org
