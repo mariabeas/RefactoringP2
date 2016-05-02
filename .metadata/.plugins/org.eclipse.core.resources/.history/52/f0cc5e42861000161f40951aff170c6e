@@ -236,19 +236,39 @@ public class Polinomio {
 	public String poliToString(TreeMap<Integer, Double> poli,String variable){
 		String polinomio="";
 		for (int i = poli.lastKey(); i >= 0; i--) {
-	
-			if(poliNoNulo(i,poli)){
+			if(!(poli.get(i)==null||poli.get(i)==0)){
 				if(poli.get(i)==1){
-					polinomio+= poliUno(i,variable);
+					if(i==0){
+						polinomio+="+1";
+					}else if(i==1){
+						polinomio+="+"+variable;
+					}else{
+						polinomio+="+"+variable+i;
+					}
 				}else if(poli.get(i)==-1){
-					
-					polinomio += poliMenorUno(i,variable);
+					if(i==0){
+						polinomio+="-1";
+					}else if(i==1){
+						polinomio+="-"+variable;
+					}else{
+						polinomio+="-"+variable+i;
+					}
 				}else if(poli.get(i)>0){
-					
-					polinomio+=poliMayorCero(i,poli,variable);
+					if(i==0){
+						polinomio+="+"+poli.get(i);
+					}else if(i==1){
+						polinomio+="+"+poli.get(i)+"*"+variable;
+					}else{
+						polinomio+="+"+poli.get(i)+"*"+variable+i;
+					}
 				}else if(poli.get(i)<0){
-					
-					polinomio+=poliMenorCero(i,poli,variable);
+					if(i==0){
+						polinomio+=poli.get(i);
+					}else if(i==1){
+						polinomio+=poli.get(i)+"*"+variable;
+					}else{
+						polinomio+=poli.get(i)+"*"+variable+i;
+					}
 				}
 				
 			}
@@ -260,61 +280,5 @@ public class Polinomio {
 			return polinomio;
 		}
 		
-	}
-
-	private String poliMenorCero(int i, TreeMap<Integer, Double> poli, String variable) {
-		String polinomio="";
-		if(i==0){
-			polinomio+=poli.get(i);
-		}else if(i==1){
-			polinomio+=poli.get(i)+"*"+variable;
-		}else{
-			polinomio+=poli.get(i)+"*"+variable+i;
-		}
-		return polinomio;
-	}
-
-	private String poliMayorCero(int i, TreeMap<Integer, Double> poli, String variable) {
-		String polinomio="";
-		if(i==0){
-			polinomio+="+"+poli.get(i);
-		}else if(i==1){
-			polinomio+="+"+poli.get(i)+"*"+variable;
-		}else{
-			polinomio+="+"+poli.get(i)+"*"+variable+i;
-		}
-		return polinomio;
-	}
-
-	private String poliMenorUno(int i, String variable) {
-		String polinomio="";
-		if(i==0){
-			polinomio+="-1";
-		}else if(i==1){
-			polinomio+="-"+variable;
-		}else{
-			polinomio+="-"+variable+i;
-		}
-		return polinomio;
-	}
-
-	private String poliUno(int i, String variable) {
-		String polinomio="";
-		if(i==0){
-			polinomio +="+1";
-			
-		}else if(i==1){
-			polinomio+="+" + variable;
-		}else{
-			polinomio+="+"+variable+i;
-		}
-		return polinomio;
-	}
-
-	private boolean poliNoNulo(int i, TreeMap<Integer, Double> poli) {
-		if(poli.get(i)==null||poli.get(i)==0){
-			return false;
-		}
-		return true;
 	}
 }
