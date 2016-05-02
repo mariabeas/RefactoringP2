@@ -12,7 +12,7 @@ public class App {
 
 	public static void main(String[] args) {
 		Logger l=Logger.getLogger("log");
-		Polinomio clase=new Polinomio();
+		polinomio clase=new polinomio();
 		Scanner leer=new Scanner(System.in);
 		TreeMap<Integer, Double> poli;
 		l.log(Level.INFO,"Bienvenid@ a nuestra aplicación.\n");
@@ -78,7 +78,7 @@ public class App {
 		} 
 		}
 	}
-	private static void operaciones(Polinomio clase,int i) {
+	private static void operaciones(polinomio clase,int i) {
 		Logger l=Logger.getLogger("log");
 		Scanner leer=new Scanner(System.in);
 		l.log(Level.INFO,"Lista de polinomios:");

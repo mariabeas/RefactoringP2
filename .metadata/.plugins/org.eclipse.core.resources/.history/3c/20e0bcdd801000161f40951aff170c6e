@@ -7,16 +7,12 @@ import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
+import javax.xml.bind.ParseConversionEvent;
 
 public class Interpolacion {
-	
 
 	static double c = 0;
 	static double raiz = 0;
-	private Interpolacion(){
-		
-	}
 
 	public static double interpol(double precision, double xizq, double xder) throws Exception {
 		int iterador = 0;
@@ -37,7 +33,7 @@ public class Interpolacion {
 		
 
 			} else {
-				
+				iterador++;
 				if ((sustitucion(xizq) * sustitucion(c)) < 0) {
 					xder = c;
 				} else {
@@ -55,7 +51,7 @@ public class Interpolacion {
 		double resultado = 0.0;
 
 		TreeMap<Integer, Double> pol1 = new TreeMap<>();
-	
+		// f(x)=x 5 -x 4 +x 3 -3
 		pol1.put(5, 1.0);
 		pol1.put(4, -1.0);
 		pol1.put(3, 1.0);
@@ -118,6 +114,8 @@ public class Interpolacion {
 		try {
 			l.log(Level.INFO, "El resultado del calculo de la raiz es: "+interpol(tol, a, b));
 			} catch (Exception e) {
+
+		
 			e.printStackTrace();
 		}
 		

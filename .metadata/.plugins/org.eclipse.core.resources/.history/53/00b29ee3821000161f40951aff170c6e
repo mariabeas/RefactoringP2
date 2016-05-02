@@ -78,7 +78,7 @@ public class App {
 		} 
 		}
 	}
-	private static void operaciones(Polinomio clase,int i) {
+	private static void operaciones(polinomio clase,int i) {
 		Logger l=Logger.getLogger("log");
 		Scanner leer=new Scanner(System.in);
 		l.log(Level.INFO,"Lista de polinomios:");

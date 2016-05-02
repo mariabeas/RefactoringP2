@@ -39,9 +39,9 @@ public class Interpolacion {
 			} else {
 				
 				if ((sustitucion(xizq) * sustitucion(c)) < 0) {
-					xder = c;
+					double xder2 = c;
 				} else {
-					xizq = c;
+					double xizq2 = c;
 				}
 
 				interpol(precision, xizq, xder);

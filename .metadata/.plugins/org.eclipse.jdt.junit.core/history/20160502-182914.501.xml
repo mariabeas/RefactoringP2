@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PolinomioTest" project="examen2PIS" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="examen2.PolinomioTest" time="0.001">
+    <testcase name="Sumatest" classname="examen2.PolinomioTest" time="0.001"/>
+    <testcase name="ruffiniTest" classname="examen2.PolinomioTest" time="0.0"/>
+    <testcase name="routhTest" classname="examen2.PolinomioTest" time="0.0"/>
+    <testcase name="productoTest" classname="examen2.PolinomioTest" time="0.0"/>
+  </testsuite>
+</testrun>
