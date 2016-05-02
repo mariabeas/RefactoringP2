@@ -6,8 +6,9 @@ import java.awt.*;
 //Written by Tim Budd, January 1996
 //revised for 1.3 event model July 2001
 //
+import java.io.Serializable;
 
-class Reina {
+class Reina implements Serializable {
 	// datos
 	private int fila;
 	private int columna;
@@ -60,8 +61,8 @@ class Reina {
 			vecina.paint(g);
 		// despues a ella misna
 		// x, y is upper left corner
-		int x = (fila - 1) * 50 + 10;
-		int y = (columna - 1) * 50 + 40;
+		int x=(fila - 1) * 50 + 10;
+	    int y = (columna - 1) * 50 + 40;
 		g.drawLine(x + 5, y + 45, x + 45, y + 45);
 		g.drawLine(x + 5, y + 45, x + 5, y + 5);
 		g.drawLine(x + 45, y + 45, x + 45, y + 5);
